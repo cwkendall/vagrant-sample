@@ -61,6 +61,13 @@ Vagrant.configure(2) do |config|
   # config.push.define "atlas" do |push|
   #   push.app = "YOUR_ATLAS_USERNAME/YOUR_APPLICATION_NAME"
   # end
+  config.push.define "ftp" do |push|
+    push.host = "54.79.29.231"
+    push.secure = true
+    push.username = "centos"
+    push.dir = "website"
+    push.destination = "/var/www/html/"
+  end
 
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
